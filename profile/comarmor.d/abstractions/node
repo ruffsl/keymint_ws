@@ -1,0 +1,4 @@
+topic /rosout p,
+
+#topic @{NODE_NAMESPACE}/status p,
+#topic @{NODE_LOGSPACE}/log p,
