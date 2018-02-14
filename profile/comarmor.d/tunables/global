@@ -1,4 +1,0 @@
-# All the tunables definitions that should be available to every profile
-# should be included here
-
-include <tunables/node>
