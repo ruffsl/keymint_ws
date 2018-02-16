@@ -13,6 +13,15 @@
                 <ros_subscribe/>
             </permissions>
         </ros_topic>
+
+        <topic qualifier="ALLOW">
+            <attachment>A_RAW_DDS_TOPIC_HERE</attachment>
+            <permissions>
+                <publish/>
+                <relay/>
+                <subscribe/>
+            </permissions>
+        </topic>
     </profile>
 
     <profile name="My Listener Profile">
