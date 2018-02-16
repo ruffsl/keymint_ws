@@ -6,24 +6,24 @@
         <attachment>/talker</attachment>
         <xi:include href="tunables/node.xml" parse="xml"/>
 
-        <topic qualifier="ALLOW">
+        <ros_topic qualifier="ALLOW">
             <attachment>/chatter</attachment>
             <permissions>
-                <publish/>
-                <subscribe/>
+                <ros_publish/>
+                <ros_subscribe/>
             </permissions>
-        </topic>
+        </ros_topic>
     </profile>
 
     <profile name="My Listener Profile">
         <attachment>/listener</attachment>
         <xi:include href="tunables/node.xml" parse="xml"/>
 
-        <topic qualifier="ALLOW">
+        <ros_topic qualifier="ALLOW">
             <attachment>/chatter</attachment>
             <permissions>
-                <subscribe/>
+                <ros_subscribe/>
             </permissions>
-        </topic>
+        </ros_topic>
     </profile>
 </profiles>

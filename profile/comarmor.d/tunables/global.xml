@@ -3,18 +3,18 @@
 <profile name="My Logger Profile" xmlns:xi="http://www.w3.org/2001/XInclude">
     <attachment>/logger</attachment>
 
-    <topic qualifier="ALLOW">
+    <ros_topic qualifier="ALLOW">
         <attachment>/rosout</attachment>
         <permissions>
-            <publish/>
-            <subscribe/>
+            <ros_publish/>
+            <ros_subscribe/>
         </permissions>
-    </topic>
+    </ros_topic>
 
-    <topic qualifier="ALLOW">
+    <ros_topic qualifier="ALLOW">
         <attachment>/rosout_agg</attachment>
         <permissions>
-            <publish/>
+            <ros_publish/>
         </permissions>
-    </topic>
+    </ros_topic>
 </profile>
