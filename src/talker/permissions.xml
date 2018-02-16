@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <permissions>
+        <grant name="talker">
+            <allow_rule>
+                <ros_publish>
+                    <ros_topics>
+                        <ros_topic>/rosout</ros_topic>
+                    </ros_topics>
+                </ros_publish>
+                <ros_publish>
+                    <ros_topics>
+                        <ros_topic>/chatter</ros_topic>
+                    </ros_topics>
+                </ros_publish>
+                <ros_subscribe>
+                    <ros_topics>
+                        <ros_topic>/chatter</ros_topic>
+                    </ros_topics>
+                </ros_subscribe>
+                <publish>
+                    <topics>
+                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
+                    </topics>
+                </publish>
+                <relay>
+                    <topics>
+                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
+                    </topics>
+                </relay>
+                <subscribe>
+                    <topics>
+                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
+                    </topics>
+                </subscribe>
+            </allow_rule>
+            <default>DENY</default>
+        </grant>
+    </permissions>
+</package>
