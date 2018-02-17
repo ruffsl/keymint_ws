@@ -13,33 +13,19 @@
                 </domains>
                 <publish>
                     <topics>
-                        <topic>rt__rosout</topic>
+                        <topic>*</topic>
                     </topics>
-                </publish>
-                <publish>
-                    <topics>
-                        <topic>rt__chatter</topic>
-                    </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
                 </publish>
                 <subscribe>
                     <topics>
-                        <topic>rt__chatter</topic>
+                        <topic>*</topic>
                     </topics>
-                </subscribe>
-                <publish>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
-                </publish>
-                <relay>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
-                </relay>
-                <subscribe>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
                 </subscribe>
             </allow_rule>
             <default>DENY</default>

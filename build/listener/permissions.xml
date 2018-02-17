@@ -13,13 +13,19 @@
                 </domains>
                 <publish>
                     <topics>
-                        <topic>rt__rosout</topic>
+                        <topic>*</topic>
                     </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
                 </publish>
                 <subscribe>
                     <topics>
-                        <topic>rt__chatter</topic>
+                        <topic>*</topic>
                     </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
                 </subscribe>
             </allow_rule>
             <default>DENY</default>
