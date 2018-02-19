@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----CE8F84B730104577359E11DC8E627B80"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----EBC82950029252C8CA4349682D7BCF39"
 
 This is an S/MIME signed message
 
-------CE8F84B730104577359E11DC8E627B80
+------EBC82950029252C8CA4349682D7BCF39
 <?xml version="1.0" encoding="utf-8"?>
 <dds>
     <permissions>
@@ -17,15 +17,117 @@ This is an S/MIME signed message
                 <domains>
                     <id>0</id>
                 </domains>
+                <subscribe>
+                    <topics>
+                        <topic>chatter</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
                 <publish>
                     <topics>
-                        <topic>rt__rosout</topic>
+                        <topic>parameter_events</topic>
                     </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
                 </publish>
                 <subscribe>
                     <topics>
-                        <topic>rt__chatter</topic>
+                        <topic>parameter_events</topic>
                     </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
+                <subscribe>
+                    <topics>
+                        <topic>clock</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>get_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>get_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>get_parameter_typesRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>get_parameter_typesReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>set_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>set_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>list_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>list_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>describe_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>describe_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
                 </subscribe>
             </allow_rule>
             <default>DENY</default>
@@ -33,43 +135,43 @@ This is an S/MIME signed message
     </permissions>
 </dds>
 
-------CE8F84B730104577359E11DC8E627B80
+------EBC82950029252C8CA4349682D7BCF39
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
 
-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
-KFpOzdVOyz3GoLalXfm6Q+AIRNhy16fX1Q==
+MIIFzwYJKoZIhvcNAQcCoIIFwDCCBbwCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggMnMIIDIzCCAgugAwIBAgIBATANBgkqhkiG9w0BAQsFADBVMQ0w
+CwYDVQQKDARBY21lMR0wGwYJKoZIhvcNAQkBFg5hY21lQGFjbWUuYWNtZTELMAkG
+A1UEBhMCVVMxCzAJBgNVBAgMAkNBMQswCQYDVQQDDAJjYTAeFw0xMzEwMjYwMDAw
+MDBaFw0yMzEwMjYyMjQ1MzBaMFUxDTALBgNVBAoMBEFjbWUxHTAbBgkqhkiG9w0B
+CQEWDmFjbWVAYWNtZS5hY21lMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExCzAJ
+BgNVBAMMAmNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArZtuK1EY
+DrjDuhZuqrd5zNH5f31ULZRMQ8ZF6jR+poM9n6H494pZQk60X42pIXnHvyRujxNB
+OV9AHDO86SSM1Pf2wnM6dHI/WoBE+3lqWRAbpeL0zjFtKmV04dK9Pe+RgoyD7L74
+iRyw3nsnwvb6wMnViHirig12FnwDXnZPBLm7K7h83hhCvdEJw3MM7ftb13GkmhU5
+h+5nPAnMbFqN6+EsFaT9LXYbD/pxtaW31/6iA+eBAUsrkCvuIZ3L7z0wl1FdlvHy
+Qc95ZJNM1O+uXKxHS4P7gJWCyZhVhi3AM/1jDpQwUDZUTelPPvChRbcGVDfPIXRf
+okfsALeUzN7kjwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCpXPhLR7z+poZNiVw7
+0GmNqO+rmJxIPzSiJtqPVSCo/31EaYFAPj2wmiXmrwzyGGPcbSzAdjEcLqDjQfON
+jZHpNfNXPW1hL3nBrkVVn1uTVu7tFoD7tQoPXGLENDtVcfeV7f/hRpDm9iX3piol
+TH/eAUyeBxt+B+KZ7efmanWH8+tUE2Xq4kZLnk0ZNpgmQgEMezItGKzzZO6rsCbl
+jl3kIpDdwUM954HvzZS9SYL6AWk5YLiLBu0P7mUjAfVr9oGtymtJv4VolBPfvjFV
+/zFJlkt47W35MOjeYDNC+7adr4SeXU5MyRn/NSP5X4dzdbP6CxBp6ZOs5UmyWFJM
+SVTNMYICbDCCAmgCAQEwWjBVMQ0wCwYDVQQKDARBY21lMR0wGwYJKoZIhvcNAQkB
+Fg5hY21lQGFjbWUuYWNtZTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQswCQYD
+VQQDDAJjYQIBATANBglghkgBZQMEAgEFAKCB5DAYBgkqhkiG9w0BCQMxCwYJKoZI
+hvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xODAyMTkyMzE3NTlaMC8GCSqGSIb3DQEJ
+BDEiBCD6Ef1YZozqsHV9cE8g4OUkNCmX+rf45dNZmY40ln4k0jB5BgkqhkiG9w0B
+CQ8xbDBqMAsGCWCGSAFlAwQBKjALBglghkgBZQMEARYwCwYJYIZIAWUDBAECMAoG
+CCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDANBggqhkiG9w0DAgIBQDAHBgUrDgMC
+BzANBggqhkiG9w0DAgIBKDANBgkqhkiG9w0BAQEFAASCAQBvcOvvIAjMNu5sFSAW
+Qwm7kO1f3NZgdgJ5XH94iNIVVJjnEQo/AEjIbUtfdKNFKFNi7GhjbSAVTx+K46Xc
+isL+sABXFpluJCUdwZBevlkgNpdcaWK38TiBS8Ea8WRkA747SIaF82H3vgjlTxrk
+1HLsehT0mt3dHlhqfOJuRd7BNtzrQhB94NZHG0/XbHYRpSVf0H81+N/zARQTpAv/
+x6pne+dFcbM0o6l21HEyDdFipDJqf2WnPAjiOq1R/kS81XEU62rzkCkE15B3rBn9
+wn23yzQkFBq/0y7EKcSEGFIYKcUOFeo/5Z3ZdBYiCZ8pkRZLExAAvn1SVNjNEqpo
+VQHg
 
-------CE8F84B730104577359E11DC8E627B80--
+------EBC82950029252C8CA4349682D7BCF39--
 

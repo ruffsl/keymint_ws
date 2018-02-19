@@ -3,16 +3,67 @@
     <permissions>
         <grant name="listener">
             <allow_rule>
-                <ros_publish>
-                    <ros_topics>
-                        <ros_topic>/rosout</ros_topic>
-                    </ros_topics>
-                </ros_publish>
+                <!-- <publish>
+                    <topics>
+                        <topic>*</topic>
+                    </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>*</topic>
+                    </topics>
+                    <partitions>
+                        <partition>*</partition>
+                    </partitions>
+                </subscribe> -->
                 <ros_subscribe>
                     <ros_topics>
                         <ros_topic>/chatter</ros_topic>
                     </ros_topics>
                 </ros_subscribe>
+                <ros_publish>
+                    <ros_topics>
+                        <ros_topic>/parameter_events</ros_topic>
+                    </ros_topics>
+                </ros_publish>
+                <ros_subscribe>
+                    <ros_topics>
+                        <ros_topic>/parameter_events</ros_topic>
+                    </ros_topics>
+                </ros_subscribe>
+                <ros_subscribe>
+                    <ros_topics>
+                        <ros_topic>/clock</ros_topic>
+                    </ros_topics>
+                </ros_subscribe>
+                <ros_call>
+                    <ros_services>
+                        <ros_service>/listener/get_parameters</ros_service>
+                    </ros_services>
+                </ros_call>
+                <ros_call>
+                    <ros_services>
+                        <ros_service>/listener/get_parameter_types</ros_service>
+                    </ros_services>
+                </ros_call>
+                <ros_call>
+                    <ros_services>
+                        <ros_service>/listener/set_parameters</ros_service>
+                    </ros_services>
+                </ros_call>
+                <ros_call>
+                    <ros_services>
+                        <ros_service>/listener/list_parameters</ros_service>
+                    </ros_services>
+                </ros_call>
+                <ros_call>
+                    <ros_services>
+                        <ros_service>/listener/describe_parameters</ros_service>
+                    </ros_services>
+                </ros_call>
             </allow_rule>
             <default>DENY</default>
         </grant>

@@ -11,15 +11,117 @@
                 <domains>
                     <id>0</id>
                 </domains>
+                <subscribe>
+                    <topics>
+                        <topic>chatter</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
                 <publish>
                     <topics>
-                        <topic>rt__rosout</topic>
+                        <topic>parameter_events</topic>
                     </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
                 </publish>
                 <subscribe>
                     <topics>
-                        <topic>rt__chatter</topic>
+                        <topic>parameter_events</topic>
                     </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
+                <subscribe>
+                    <topics>
+                        <topic>clock</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rt</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>get_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>get_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>get_parameter_typesRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>get_parameter_typesReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>set_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>set_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>list_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>list_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
+                </subscribe>
+                <publish>
+                    <topics>
+                        <topic>describe_parametersRequest</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rq/listener</partition>
+                    </partitions>
+                </publish>
+                <subscribe>
+                    <topics>
+                        <topic>describe_parametersReply</topic>
+                    </topics>
+                    <partitions>
+                        <partition>rr/listener</partition>
+                    </partitions>
                 </subscribe>
             </allow_rule>
             <default>DENY</default>
