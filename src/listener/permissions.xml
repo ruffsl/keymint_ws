@@ -3,22 +3,6 @@
     <permissions>
         <grant name="listener">
             <allow_rule>
-                <!-- <publish>
-                    <topics>
-                        <topic>*</topic>
-                    </topics>
-                    <partitions>
-                        <partition>*</partition>
-                    </partitions>
-                </publish>
-                <subscribe>
-                    <topics>
-                        <topic>*</topic>
-                    </topics>
-                    <partitions>
-                        <partition>*</partition>
-                    </partitions>
-                </subscribe> -->
                 <ros_subscribe>
                     <ros_topics>
                         <ros_topic>/chatter</ros_topic>
