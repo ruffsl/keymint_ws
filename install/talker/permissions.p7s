@@ -1,95 +1,101 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----B7ACBF8709915DBB33C0DC4C52922D4B"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----E27D83BEF1C637632A17DD82306DE26E"
 
 This is an S/MIME signed message
 
-------B7ACBF8709915DBB33C0DC4C52922D4B
+------E27D83BEF1C637632A17DD82306DE26E
 <?xml version="1.0" encoding="utf-8"?>
 <dds>
-    <permissions>
-        <grant name="talker">
-            <subject_name>CN=talker</subject_name>
-            <validity>
-                <not_before>2013-10-26T00:00:00</not_before>
-                <not_after>2023-10-26T22:45:30</not_after>
-            </validity>
-            <allow_rule>
-                <domains>
-                    <id>0</id>
-                </domains>
-                <publish>
-                    <topics>
-                        <topic>rt__rosout</topic>
-                    </topics>
-                </publish>
-                <publish>
-                    <topics>
-                        <topic>rt__chatter</topic>
-                    </topics>
-                </publish>
-                <subscribe>
-                    <topics>
-                        <topic>rt__chatter</topic>
-                    </topics>
-                </subscribe>
-                <publish>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
-                </publish>
-                <relay>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
-                </relay>
-                <subscribe>
-                    <topics>
-                        <topic>A_RAW_DDS_TOPIC_HERE</topic>
-                    </topics>
-                </subscribe>
-            </allow_rule>
-            <default>DENY</default>
-        </grant>
-    </permissions>
+  <permissions>
+    <grant name="talker">
+      <subject_name>CN=talker</subject_name>
+      <validity>
+        <not_before>2013-10-26T00:00:00</not_before>
+        <not_after>2023-10-26T22:45:30</not_after>
+      </validity>
+      <allow_rule>
+        <domains>
+          <id>0</id>
+        </domains>
+        <publish>
+          <topics>
+            <topic>rt/chatter</topic>
+            <topic>rt/parameter_events</topic>
+            <topic>rq/talker/describe_parametersRequest</topic>
+            <topic>rq/talker/get_parameter_typesRequest</topic>
+            <topic>rq/talker/get_parametersRequest</topic>
+            <topic>rq/talker/list_parametersRequest</topic>
+            <topic>rq/talker/set_parametersRequest</topic>
+            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
+            <topic>rr/talker/describe_parametersReply</topic>
+            <topic>rr/talker/get_parameter_typesReply</topic>
+            <topic>rr/talker/get_parametersReply</topic>
+            <topic>rr/talker/list_parametersReply</topic>
+            <topic>rr/talker/set_parametersReply</topic>
+            <topic>rr/talker/set_parameters_atomicallyReply</topic>
+          </topics>
+        </publish>
+        <subscribe>
+          <topics>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/clock</topic>
+            <topic>rr/talker/describe_parametersReply</topic>
+            <topic>rr/talker/get_parameter_typesReply</topic>
+            <topic>rr/talker/get_parametersReply</topic>
+            <topic>rr/talker/list_parametersReply</topic>
+            <topic>rr/talker/set_parametersReply</topic>
+            <topic>rr/talker/set_parameters_atomicallyReply</topic>
+            <topic>rq/talker/describe_parametersRequest</topic>
+            <topic>rq/talker/get_parameter_typesRequest</topic>
+            <topic>rq/talker/get_parametersRequest</topic>
+            <topic>rq/talker/list_parametersRequest</topic>
+            <topic>rq/talker/set_parametersRequest</topic>
+            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
+          </topics>
+        </subscribe>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
 </dds>
 
-------B7ACBF8709915DBB33C0DC4C52922D4B
+------E27D83BEF1C637632A17DD82306DE26E
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
 
-MIIF5QYJKoZIhvcNAQcCoIIF1jCCBdICAQExDzANBglghkgBZQMEAgEFADALBgkq
-hkiG9w0BBwGgggM4MIIDNDCCAhygAwIBAgIBAjANBgkqhkiG9w0BAQsFADBaMQsw
-CQYDVQQIDAJDQTEQMA4GA1UEAwwHcm9vdF9jYTELMAkGA1UEBhMCVVMxHTAbBgkq
-hkiG9w0BCQEWDmFjbWVAYWNtZS5hY21lMQ0wCwYDVQQKDARBY21lMB4XDTEzMTAy
-NjAwMDAwMFoXDTIzMTAyNjIyNDUzMFowYTELMAkGA1UECAwCQ0ExFzAVBgNVBAMM
-DnBlcm1pc3Npb25zX2NhMQswCQYDVQQGEwJVUzEdMBsGCSqGSIb3DQEJARYOYWNt
-ZUBhY21lLmFjbWUxDTALBgNVBAoMBEFjbWUwggEiMA0GCSqGSIb3DQEBAQUAA4IB
-DwAwggEKAoIBAQC+7NcAlKXsT6eskqW2QhOdF7skwSIWah3h8wAPyQC6hzm4W5fY
-2gH+b1suY3Q5BLa8nCzWp561bJo6I2WrMGhqMYcBqWfvLmoK8R5iUvZoptSpdiea
-jGubE8TqAqtNL03lY6HltWQYtwK7x5Wyd6Fg+/9VM8yN4ZEtZDUGK20MyjkijgZJ
-JKHiYpd8vhxp1QtFLmULQxlNf77fVrklJUeF6WsCTDU6vTCutCFVJeqA3aULqhjg
-NgZjSQO+4XcyXL77bq3ooASAXuZS1adv9LszVBNQQHQQevzUpByMbdGD/PpQjaC7
-2PE2v8ZmOEJBQrY1PuuaZGnNhWhCm/AdTf85AgMBAAEwDQYJKoZIhvcNAQELBQAD
-ggEBAC7nrE7dY35CV7xybHOjLtr86JRzpRZaDlLboKa7pcDLhvk4P///PRYJqaoA
-9U9Mhpa8mVQpICFFTIT1Z40sLKgn3oEGHUP4KkjSQAuxCpkAJLl/2s42JmaU+YdM
-21s2pUo6I7gYYcpi5TBhCFUiA0olBE/DLm9kGB63t2QsgCQLRaNYgmKqIuk/eLaJ
-roE1OQrGRaqW9WTTmFLdvP88i9Y1i191OlnkmLbjaclv4j3j2myIDQJpOZRUazfT
-IbkiZv0RXPiQ8//LMVKXc5TQT37IQbgCmgogd3wwwdzZ4exKljno/gIXP5P66Qds
-SiliMAgZHYKYT5OlH+5L3tDlq+4xggJxMIICbQIBATBfMFoxCzAJBgNVBAgMAkNB
-MRAwDgYDVQQDDAdyb290X2NhMQswCQYDVQQGEwJVUzEdMBsGCSqGSIb3DQEJARYO
-YWNtZUBhY21lLmFjbWUxDTALBgNVBAoMBEFjbWUCAQIwDQYJYIZIAWUDBAIBBQCg
-geQwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgw
-MjE2MDU1NDU4WjAvBgkqhkiG9w0BCQQxIgQgW7ZJPhzfYfsUbFL41Fq0pBayxjjR
-n7Y+UWyVAYCekK0weQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZI
-AWUDBAEWMAsGCWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAw
-DQYIKoZIhvcNAwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwDQYJKoZIhvcN
-AQEBBQAEggEAQAt88DvfE9j3WLbi6BOoZsss8s7Yflw46U8ZeFp+GecYih4g7Zi0
-znF+XnpweQ/KVDn78XbCJXTkCdcd/EN3fA7ChTi3EEMEhkOsnWxi9oSn75gurQs9
-1AoY7s1ZnyF0o26A8GCh5M+GPrmtxk4lKkiyI5OM/TOXSiKz7tMzqgwQWu1OfGpw
-H8k5TS3DlMvHK6VHhjZb72MGgNNfFWB8K+2zsfhbuGu89AkEiE9OiteOxAtdQRY3
-5amNGJdJfJvLwgK9eU8QFZpQlv4mTS7bUTKU/+cK6CAf7chW1S5d9hBmzIcD+0vU
-KBtgI+fHcu5oqVgqJJiu8tWEMv1GFPojxg==
+MIIFzwYJKoZIhvcNAQcCoIIFwDCCBbwCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggMnMIIDIzCCAgugAwIBAgIBATANBgkqhkiG9w0BAQsFADBVMQsw
+CQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExDTALBgNVBAoMBEFjbWUxCzAJBgNVBAMM
+AmNhMR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAw
+MDBaFw0yMzEwMjYyMjQ1MzBaMFUxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEN
+MAsGA1UECgwEQWNtZTELMAkGA1UEAwwCY2ExHTAbBgkqhkiG9w0BCQEMDmFjbWVA
+YWNtZS5hY21lMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2J7zhT7Y
+ufbl0RQaNSFMXuQKAAtwFIUwNQsbu0Dn5A1R+VqqSp7UN28mA4VMm64YedVjdiWe
+jV2DrICx75jaDB6C5Ew7aDgVhrRl/HVtMrv5d53Y8pfubMdFtVtokgaZHdfv9+Hd
+tuifmIflztlC60aPe/KSOcqDezdfAkPGMiOBYr5MMtkkEp6CaxoI0Xv4Bk2D5y2A
+UuE+fANGm7/TVDi9jVXq3dfc/4+TpKZiojspuNDUhs98TQbL81elA8p0eglHRlQS
+rkHIE2dGOP0RWOVtnFvmHXlMobw9JWGbkNmIv/vL/495UuGjY+c+uS6pwGQKuH9W
+V9kHAN1No1I6hwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBOPN7UWF9VhPaWaVse
+AbD/lVfyNFTInEJYxWr2TEHigWTB8WJCtDRENTkQOwKa1VDhV+0utZ5bYfEtJv+g
+6zLGEkP58jM3mLnCKYH5rS470Z515o+lWgS58zznTHDlCxg7ETb3mAvB0eBxP8QT
+KT59FvE+hcoZeWjj5EefJ2D8PM05Bj4twOV4Qp+MUbZ2SDB80xG/ctoUmr+4HqKF
+b0QExFUzAXmk9n886pdiktQAigH13NOnIzb89M6e1QUiFccCJUwiBxUXNBJIoTAo
+L9LLXncr5+f6GKLNk2oYTM6OhK9ku4fIAqAJAbj3cB7ZiqxCXflZ3/y5YLQlV3k2
+0LNRMYICbDCCAmgCAQEwWjBVMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExDTAL
+BgNVBAoMBEFjbWUxCzAJBgNVBAMMAmNhMR0wGwYJKoZIhvcNAQkBDA5hY21lQGFj
+bWUuYWNtZQIBATANBglghkgBZQMEAgEFAKCB5DAYBgkqhkiG9w0BCQMxCwYJKoZI
+hvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xODA4MTYwMTI5NTRaMC8GCSqGSIb3DQEJ
+BDEiBCDuPYOkGoUI9jkFgMLiP18bDwMVkK1QLgnwG1MrK83YpzB5BgkqhkiG9w0B
+CQ8xbDBqMAsGCWCGSAFlAwQBKjALBglghkgBZQMEARYwCwYJYIZIAWUDBAECMAoG
+CCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDANBggqhkiG9w0DAgIBQDAHBgUrDgMC
+BzANBggqhkiG9w0DAgIBKDANBgkqhkiG9w0BAQEFAASCAQCLxlOSqd1MGbZiU0s7
+aEZzHfHPFVyIVHa7LXur6W0mtJdbRAgJXMOSkk9+CkWOJtew7wfqkIvlmNsywd6w
+uik31zNkHOdcJMhMQW5uWYt7wN/sPqs5QmBcXyHeiTnHrgLD1cmQBA8UgroIhjG9
+P/HHOgHl261b/y/z6WYFZ2FEuK5rz+l3xONGcrGcHcAvIY6e804pgXeNVGe3/wCf
+m4aQY6orEHeSOV12FcTKc/ZGBg27Dmc+DSeYzut+2ZLrKOpkG2FLR9JgSt3d0Jtz
+cHHz8fKScOYk4ra97Rq4xhUOIjR+EmBoZMN7CWIXkgkb8TfcqlybJGZX+M+L71Ai
+1GWO
 
-------B7ACBF8709915DBB33C0DC4C52922D4B--
+------E27D83BEF1C637632A17DD82306DE26E--
 
