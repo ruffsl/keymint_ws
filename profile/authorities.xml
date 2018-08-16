@@ -3,7 +3,7 @@
     <authorities>
         <authority name="ca">
             <cert>
-                <serial_number>0</serial_number>
+                <serial_number>1</serial_number>
                 <issuer_name></issuer_name>
             </cert>
         </authority>
