@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<ros_topic qualifier="ALLOW">
-    <attachment>/rosout</attachment>
-    <permissions>
-        <ros_publish/>
-    </permissions>
-</ros_topic>
