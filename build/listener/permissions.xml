@@ -13,9 +13,9 @@
         </domains>
         <subscribe>
           <topics>
-            <topic>rt/chatter</topic>
-            <topic>rt/parameter_events</topic>
             <topic>rt/clock</topic>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/chatter</topic>
             <topic>rr/listener/describe_parametersReply</topic>
             <topic>rr/listener/get_parameter_typesReply</topic>
             <topic>rr/listener/get_parametersReply</topic>

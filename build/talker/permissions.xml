@@ -11,28 +11,10 @@
         <domains>
           <id>0</id>
         </domains>
-        <publish>
-          <topics>
-            <topic>rt/chatter</topic>
-            <topic>rt/parameter_events</topic>
-            <topic>rq/talker/describe_parametersRequest</topic>
-            <topic>rq/talker/get_parameter_typesRequest</topic>
-            <topic>rq/talker/get_parametersRequest</topic>
-            <topic>rq/talker/list_parametersRequest</topic>
-            <topic>rq/talker/set_parametersRequest</topic>
-            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
-            <topic>rr/talker/describe_parametersReply</topic>
-            <topic>rr/talker/get_parameter_typesReply</topic>
-            <topic>rr/talker/get_parametersReply</topic>
-            <topic>rr/talker/list_parametersReply</topic>
-            <topic>rr/talker/set_parametersReply</topic>
-            <topic>rr/talker/set_parameters_atomicallyReply</topic>
-          </topics>
-        </publish>
         <subscribe>
           <topics>
-            <topic>rt/parameter_events</topic>
             <topic>rt/clock</topic>
+            <topic>rt/parameter_events</topic>
             <topic>rr/talker/describe_parametersReply</topic>
             <topic>rr/talker/get_parameter_typesReply</topic>
             <topic>rr/talker/get_parametersReply</topic>
@@ -47,6 +29,24 @@
             <topic>rq/talker/set_parameters_atomicallyRequest</topic>
           </topics>
         </subscribe>
+        <publish>
+          <topics>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/chatter</topic>
+            <topic>rq/talker/describe_parametersRequest</topic>
+            <topic>rq/talker/get_parameter_typesRequest</topic>
+            <topic>rq/talker/get_parametersRequest</topic>
+            <topic>rq/talker/list_parametersRequest</topic>
+            <topic>rq/talker/set_parametersRequest</topic>
+            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
+            <topic>rr/talker/describe_parametersReply</topic>
+            <topic>rr/talker/get_parameter_typesReply</topic>
+            <topic>rr/talker/get_parametersReply</topic>
+            <topic>rr/talker/list_parametersReply</topic>
+            <topic>rr/talker/set_parametersReply</topic>
+            <topic>rr/talker/set_parameters_atomicallyReply</topic>
+          </topics>
+        </publish>
       </allow_rule>
       <default>DENY</default>
     </grant>
