@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+    <identities>
+        <identity name="add_two_ints_server">
+            <cert>
+                <serial_number></serial_number>
+            </cert>
+        </identity>
+    </identities>
+</package>

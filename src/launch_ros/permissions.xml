@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <permissions>
+    <grant name="launch_ros">
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</package>
