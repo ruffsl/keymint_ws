@@ -1,72 +1,65 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----D138C672177BC391DF6160DD2D18AFBF"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----28A4E570230BC821E85A57AFE4E4ECD8"
 
 This is an S/MIME signed message
 
-------D138C672177BC391DF6160DD2D18AFBF
-<?xml version="1.0" encoding="utf-8"?>
-<dds>
-  <domain_access_rules>
-    <domain_rule>
-      <domains>
-        <id>0</id>
-      </domains>
-      <allow_unauthenticated_participants>false</allow_unauthenticated_participants>
-      <enable_join_access_control>true</enable_join_access_control>
-      <discovery_protection_kind>ENCRYPT</discovery_protection_kind>
-      <liveliness_protection_kind>ENCRYPT</liveliness_protection_kind>
-      <rtps_protection_kind>SIGN</rtps_protection_kind>
-      <topic_access_rules>
-        <topic_rule>
-          <topic_expression>*</topic_expression>
-          <enable_discovery_protection>true</enable_discovery_protection>
-          <enable_read_access_control>true</enable_read_access_control>
-          <enable_write_access_control>true</enable_write_access_control>
-          <metadata_protection_kind>ENCRYPT</metadata_protection_kind>
-          <data_protection_kind>ENCRYPT</data_protection_kind>
-        </topic_rule>
-      </topic_access_rules>
-    </domain_rule>
-  </domain_access_rules>
+------28A4E570230BC821E85A57AFE4E4ECD8
+Content-Type: text/plain
+
+<?xml version="1.0" encoding="UTF-8"?>
+<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.omg.org/spec/DDS-SECURITY/20160303/omg_shared_ca_governance.xsd">
+    <domain_access_rules>
+        <domain_rule>
+            <domains>
+              <id>0</id>
+            </domains>
+            <!-- SPECIFIED IN DDS SECURITY XSD -->
+            <!-- <allow_unauthenticated_join>false</allow_unauthenticated_join> -->
+            <!-- SPECIFIED IN DDS SECURITY BUT NOT IN THE OFFICIAL XSD,
+            IMPLEMENTED BY RTI DDSSEC-130 and RTI XSD:
+            http://community.rti.com/schema/5.3.0/dds_security_governance.xsd -->
+            <allow_unauthenticated_participants>false</allow_unauthenticated_participants>
+            <enable_join_access_control>true</enable_join_access_control>
+            <discovery_protection_kind>ENCRYPT</discovery_protection_kind>
+            <liveliness_protection_kind>ENCRYPT</liveliness_protection_kind>
+            <rtps_protection_kind>SIGN</rtps_protection_kind>
+            <topic_access_rules>
+                <topic_rule>
+                    <topic_expression>*</topic_expression>
+                    <enable_discovery_protection>true</enable_discovery_protection>
+                    <enable_liveliness_protection>true</enable_liveliness_protection>
+                    <enable_read_access_control>true</enable_read_access_control>
+                    <enable_write_access_control>true</enable_write_access_control>
+                    <metadata_protection_kind>ENCRYPT</metadata_protection_kind>
+                    <data_protection_kind>ENCRYPT</data_protection_kind>
+                </topic_rule>
+            </topic_access_rules>
+        </domain_rule>
+    </domain_access_rules>
 </dds>
 
-------D138C672177BC391DF6160DD2D18AFBF
+------28A4E570230BC821E85A57AFE4E4ECD8
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
 
-MIIFzwYJKoZIhvcNAQcCoIIFwDCCBbwCAQExDzANBglghkgBZQMEAgEFADALBgkq
-hkiG9w0BBwGgggMnMIIDIzCCAgugAwIBAgIBATANBgkqhkiG9w0BAQsFADBVMQsw
-CQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExDTALBgNVBAoMBEFjbWUxCzAJBgNVBAMM
-AmNhMR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAw
-MDBaFw0yMzEwMjYyMjQ1MzBaMFUxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEN
-MAsGA1UECgwEQWNtZTELMAkGA1UEAwwCY2ExHTAbBgkqhkiG9w0BCQEMDmFjbWVA
-YWNtZS5hY21lMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2J7zhT7Y
-ufbl0RQaNSFMXuQKAAtwFIUwNQsbu0Dn5A1R+VqqSp7UN28mA4VMm64YedVjdiWe
-jV2DrICx75jaDB6C5Ew7aDgVhrRl/HVtMrv5d53Y8pfubMdFtVtokgaZHdfv9+Hd
-tuifmIflztlC60aPe/KSOcqDezdfAkPGMiOBYr5MMtkkEp6CaxoI0Xv4Bk2D5y2A
-UuE+fANGm7/TVDi9jVXq3dfc/4+TpKZiojspuNDUhs98TQbL81elA8p0eglHRlQS
-rkHIE2dGOP0RWOVtnFvmHXlMobw9JWGbkNmIv/vL/495UuGjY+c+uS6pwGQKuH9W
-V9kHAN1No1I6hwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBOPN7UWF9VhPaWaVse
-AbD/lVfyNFTInEJYxWr2TEHigWTB8WJCtDRENTkQOwKa1VDhV+0utZ5bYfEtJv+g
-6zLGEkP58jM3mLnCKYH5rS470Z515o+lWgS58zznTHDlCxg7ETb3mAvB0eBxP8QT
-KT59FvE+hcoZeWjj5EefJ2D8PM05Bj4twOV4Qp+MUbZ2SDB80xG/ctoUmr+4HqKF
-b0QExFUzAXmk9n886pdiktQAigH13NOnIzb89M6e1QUiFccCJUwiBxUXNBJIoTAo
-L9LLXncr5+f6GKLNk2oYTM6OhK9ku4fIAqAJAbj3cB7ZiqxCXflZ3/y5YLQlV3k2
-0LNRMYICbDCCAmgCAQEwWjBVMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExDTAL
-BgNVBAoMBEFjbWUxCzAJBgNVBAMMAmNhMR0wGwYJKoZIhvcNAQkBDA5hY21lQGFj
-bWUuYWNtZQIBATANBglghkgBZQMEAgEFAKCB5DAYBgkqhkiG9w0BCQMxCwYJKoZI
-hvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xODA4MjQwMTIyNDFaMC8GCSqGSIb3DQEJ
-BDEiBCAiyLesWN51FLYtX2rlQehnf71DC98I+tbuXvlM8RWxOzB5BgkqhkiG9w0B
-CQ8xbDBqMAsGCWCGSAFlAwQBKjALBglghkgBZQMEARYwCwYJYIZIAWUDBAECMAoG
-CCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDANBggqhkiG9w0DAgIBQDAHBgUrDgMC
-BzANBggqhkiG9w0DAgIBKDANBgkqhkiG9w0BAQEFAASCAQCV+TLCL/RYGamyaMNa
-T1sdztY5zho3KwSbLKzPOm9z/bT27LjJ/GuRT5ba6GY37Y65WUx8U5zEuHguvefS
-ztYvWKU09UbvI5ImftqdOgbAetAeF6PC/lMkrYUJv/jAiSFTKa18lTmC2M3T3Bqb
-oWF4NszVq/fIJqS1V25OGij09a1TC5zvRcVPElP8BCoDh7U5iQfHTAUD/MxbbVi8
-E+nvraZ05f1VNNc5SKzCMwwNpeoO25a5NDoq7rOAhSdnbD/ZqJK20ZFOSUAR6TvN
-sy4uGNiPLhXNrATj2iE+cGXwG3avDGrG1O91gSPAGCRps5e+eTdCG8GxZHgXLNi9
-Pri9
+MIIC6QYJKoZIhvcNAQcCoIIC2jCCAtYCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggE3MIIBMzCB2aADAgECAgkAulUAhNPamiswCgYIKoZIzj0EAwIw
+FjEUMBIGA1UEAwwLc3JvczJ0ZXN0Q0EwHhcNMTgwODI0MjA0NTIxWhcNMjgwODIx
+MjA0NTIxWjAWMRQwEgYDVQQDDAtzcm9zMnRlc3RDQTBZMBMGByqGSM49AgEGCCqG
+SM49AwEHA0IABMozV7uQDbmWpFyFMxVxqd/pEVJndB9fXMNlyIPvzvvcHugnLHMO
+oOdvSjR5qM3VtBRwbH4A63S024ROlVoMV5mjEDAOMAwGA1UdEwQFMAMBAf8wCgYI
+KoZIzj0EAwIDSQAwRgIhAM/7Zkqo1Vdtl55/XSiVFeMODySkyou5/8c4Tymb01V+
+AiEAll3siz7jxjXUgZRmb5KocRQZE0vU7xxSvDW9t1fcJxQxggF2MIIBcgIBATAj
+MBYxFDASBgNVBAMMC3Nyb3MydGVzdENBAgkAulUAhNPamiswDQYJYIZIAWUDBAIB
+BQCggeQwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcN
+MTgwODI0MjA0NTIxWjAvBgkqhkiG9w0BCQQxIgQgyP3iC4NQkGDO8ENiDQwjzxzY
+MiCfqMDl2mJffoDFlUEweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJ
+YIZIAWUDBAEWMAsGCWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgIC
+AIAwDQYIKoZIhvcNAwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZI
+zj0EAwIERjBEAiBlhEvDij892tXjqpFlbay4TDBUhaH0F+/IOfb1Vyb3OwIgdNTK
+t+MugTqQWwpisKT0PIgHId966C19Tb0H81A99nQ=
 
-------D138C672177BC391DF6160DD2D18AFBF--
+------28A4E570230BC821E85A57AFE4E4ECD8--
 
