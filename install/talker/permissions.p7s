@@ -1,23 +1,17 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----95FFADB0404BAE9DCF53D855721CB6AF"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----7D971A7972F63BFDD9EBDE2B82A5AE29"
 
 This is an S/MIME signed message
 
-------95FFADB0404BAE9DCF53D855721CB6AF
+------7D971A7972F63BFDD9EBDE2B82A5AE29
 Content-Type: text/plain
 
-<?xml version="1.0" encoding="UTF-8"?>
-<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://www.omg.org/spec/DDS-SECURITY/20160303/omg_shared_ca_permissions.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<dds>
   <permissions>
-    <grant name="talker_policies">
+    <grant name="talker">
       <subject_name>CN=talker</subject_name>
       <validity>
-      <!--
-       Format is CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
-                           The time zone may be specified as Z (UTC) or (+|-)hh:mm.
-                           Time zones that aren't specified are considered UTC.
-      -->
         <not_before>2013-10-26T00:00:00</not_before>
         <not_after>2023-10-26T22:45:30</not_after>
       </validity>
@@ -25,49 +19,73 @@ Content-Type: text/plain
         <domains>
           <id>0</id>
         </domains>
-        <publish>
-          <partitions>
-            <partition>*</partition>
-          </partitions>
-          <topics>
-            <topic>*</topic>
-          </topics>
-        </publish>
         <subscribe>
-          <partitions>
-            <partition>*</partition>
-          </partitions>
           <topics>
-            <topic>*</topic>
+            <topic>rt/clock</topic>
+            <topic>rt/parameter_events</topic>
+            <topic>rr/talker/describe_parametersReply</topic>
+            <topic>rr/talker/get_parameter_typesReply</topic>
+            <topic>rr/talker/get_parametersReply</topic>
+            <topic>rr/talker/list_parametersReply</topic>
+            <topic>rr/talker/set_parametersReply</topic>
+            <topic>rr/talker/set_parameters_atomicallyReply</topic>
+            <topic>rq/talker/describe_parametersRequest</topic>
+            <topic>rq/talker/get_parameter_typesRequest</topic>
+            <topic>rq/talker/get_parametersRequest</topic>
+            <topic>rq/talker/list_parametersRequest</topic>
+            <topic>rq/talker/set_parametersRequest</topic>
+            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
           </topics>
         </subscribe>
+        <publish>
+          <topics>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/chatter</topic>
+            <topic>rq/talker/describe_parametersRequest</topic>
+            <topic>rq/talker/get_parameter_typesRequest</topic>
+            <topic>rq/talker/get_parametersRequest</topic>
+            <topic>rq/talker/list_parametersRequest</topic>
+            <topic>rq/talker/set_parametersRequest</topic>
+            <topic>rq/talker/set_parameters_atomicallyRequest</topic>
+            <topic>rr/talker/describe_parametersReply</topic>
+            <topic>rr/talker/get_parameter_typesReply</topic>
+            <topic>rr/talker/get_parametersReply</topic>
+            <topic>rr/talker/list_parametersReply</topic>
+            <topic>rr/talker/set_parametersReply</topic>
+            <topic>rr/talker/set_parameters_atomicallyReply</topic>
+          </topics>
+        </publish>
       </allow_rule>
       <default>DENY</default>
     </grant>
   </permissions>
 </dds>
 
-------95FFADB0404BAE9DCF53D855721CB6AF
+------7D971A7972F63BFDD9EBDE2B82A5AE29
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
 
-MIIC6gYJKoZIhvcNAQcCoIIC2zCCAtcCAQExDzANBglghkgBZQMEAgEFADALBgkq
-hkiG9w0BBwGgggE3MIIBMzCB2aADAgECAgkAulUAhNPamiswCgYIKoZIzj0EAwIw
-FjEUMBIGA1UEAwwLc3JvczJ0ZXN0Q0EwHhcNMTgwODI0MjA0NTIxWhcNMjgwODIx
-MjA0NTIxWjAWMRQwEgYDVQQDDAtzcm9zMnRlc3RDQTBZMBMGByqGSM49AgEGCCqG
-SM49AwEHA0IABMozV7uQDbmWpFyFMxVxqd/pEVJndB9fXMNlyIPvzvvcHugnLHMO
-oOdvSjR5qM3VtBRwbH4A63S024ROlVoMV5mjEDAOMAwGA1UdEwQFMAMBAf8wCgYI
-KoZIzj0EAwIDSQAwRgIhAM/7Zkqo1Vdtl55/XSiVFeMODySkyou5/8c4Tymb01V+
-AiEAll3siz7jxjXUgZRmb5KocRQZE0vU7xxSvDW9t1fcJxQxggF3MIIBcwIBATAj
-MBYxFDASBgNVBAMMC3Nyb3MydGVzdENBAgkAulUAhNPamiswDQYJYIZIAWUDBAIB
-BQCggeQwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcN
-MTgwODI0MjA0NTI3WjAvBgkqhkiG9w0BCQQxIgQggqbj1lYN3NcJgA4FEgO4DJkm
-VrD+ONZI9q55tdXS1+wweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJ
-YIZIAWUDBAEWMAsGCWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgIC
-AIAwDQYIKoZIhvcNAwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZI
-zj0EAwIERzBFAiEAxScIheh8qQPmaod9dgD/vRNL8XYB/F9sd7PXCu6EG8ECIESb
-iIK4pcwnWyIn8SLBZHZpm0epVNudPzZ5sSmA9idd
+MIIDnwYJKoZIhvcNAQcCoIIDkDCCA4wCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggG0MIIBsDCCAVWgAwIBAgIBATAKBggqhkjOPQQDAjBVMQswCQYD
+VQQDDAJjYTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQ0wCwYDVQQKDARBY21l
+MR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAwMDBa
+Fw0yMzEwMjYyMjQ1MzBaMFUxCzAJBgNVBAMMAmNhMQswCQYDVQQGEwJVUzELMAkG
+A1UECAwCQ0ExDTALBgNVBAoMBEFjbWUxHTAbBgkqhkiG9w0BCQEMDmFjbWVAYWNt
+ZS5hY21lMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPqr+94Tys5aRyfhVyxB6
+96nm6rH3rQl3zwGm/6uBdFTEriWpbtAFLmTSARFsC3uc3FPETysXa/Sy9R6Q/Nix
+M6MWMBQwEgYDVR0TAQH/BAgwBgEB/wIBATAKBggqhkjOPQQDAgNJADBGAiEA6lhH
+fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
+sSxbN77b9WtkFToabk1rBzGCAa8wggGrAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
+BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
+DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwODI1MDIwMTEx
+WjAvBgkqhkiG9w0BCQQxIgQgos6xRcq3TxsgOYqcI2mCbVuFBcAb2pciR/hO+z3V
+jywweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIESDBGAiEA
+3DItup+21TGgG47PBdmgeWezFjftr3hO2Zos5iXicPoCIQCVrh2J9MZyiaAw2SH0
+AJEdvITl8aghaW2epYJkMQy/9A==
 
-------95FFADB0404BAE9DCF53D855721CB6AF--
+------7D971A7972F63BFDD9EBDE2B82A5AE29--
 
