@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles xmlns:xi="http://www.w3.org/2001/XInclude">
+  <profile name="/_ros2cli_node_daemon_0">
+    <attachments>
+      <attachment>/_ros2cli_node_daemon_0</attachment>
+    </attachments>
+  </profile>
+  <profile name="/joint_states_publisher">
+    <attachments>
+      <attachment>/joint_states_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/sensor_state</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/joint_states</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/odometry_publisher">
+    <attachments>
+      <attachment>/odometry_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/imu</attachment>
+        <attachment>/sensor_state</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/odom</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/robot_state_publisher">
+    <attachments>
+      <attachment>/robot_state_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/joint_states</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/robot_description</attachment>
+        <attachment>/tf</attachment>
+        <attachment>/tf_static</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/rviz">
+    <attachments>
+      <attachment>/rviz</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/clicked_point</attachment>
+        <attachment>/move_base_simple/goal</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/odom</attachment>
+        <attachment>/scan_half</attachment>
+        <attachment>/tf</attachment>
+        <attachment>/tf_static</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/scan_publisher">
+    <attachments>
+      <attachment>/scan_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/scan_half</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/scan</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/tf_publisher">
+    <attachments>
+      <attachment>/tf_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/odom</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/tf</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/time_sync">
+    <attachments>
+      <attachment>/time_sync</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/time_sync</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/turtlebot3_core">
+    <attachments>
+      <attachment>/turtlebot3_core</attachment>
+    </attachments>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/scan_half</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+  <profile name="/turtlebot3_teleop_key">
+    <attachments>
+      <attachment>/turtlebot3_teleop_key</attachment>
+    </attachments>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/cmd_vel</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+</profiles>
