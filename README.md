@@ -10,13 +10,13 @@ scratch workspace for keymint testing
 <profiles xmlns:xi="http://www.w3.org/2001/XInclude">
     <profile name="My Talker Profile">
         <attachments>
-            <attachment>/*/talker</attachment>
+            <attachment>*/talker</attachment>
         </attachments>
         <xi:include href="common/node.xml" parse="xml" />
 
         <ros_topic qualifier="ALLOW">
             <attachments>
-                <attachment>{namespace}/chatter</attachment>
+                <attachment>{namespace}chatter</attachment>
             </attachments>
             <permissions>
                 <ros_publish/>
@@ -26,13 +26,13 @@ scratch workspace for keymint testing
 
     <profile name="My Listener Profile">
         <attachments>
-            <attachment>/*/listener</attachment>
+            <attachment>*/listener</attachment>
         </attachments>
         <xi:include href="common/node.xml" parse="xml" />
 
         <ros_topic qualifier="ALLOW">
             <attachments>
-                <attachment>{namespace}/chatter</attachment>
+                <attachment>{namespace}chatter</attachment>
             </attachments>
             <permissions>
                 <ros_subscribe/>
@@ -47,12 +47,25 @@ scratch workspace for keymint testing
 ``` shell
 cd ~/example
 docker run -it --rm -v=`pwd`:/root/keymint_ws keymint/keymint_tools:latest
-keymint keystore init --bootstrap=keymint_ros
+keymint keystore init --bootstrap keymint_ros
 cp talker_listener.xml profile/comarmor.d/
+
+keymint keystore create_pkg talker
+keymint keystore create_pkg foo/talker
 keymint keystore create_pkg foo/bar/talker
+
+keymint keystore create_pkg listener
+keymint keystore create_pkg foo/listener
 keymint keystore create_pkg foo/bar/listener
+
+keymint keystore build_pkg src/talker
+keymint keystore build_pkg src/foo/talker
 keymint keystore build_pkg src/foo/bar/talker
+
+keymint keystore build_pkg src/listener
+keymint keystore build_pkg src/foo/listener
 keymint keystore build_pkg src/foo/bar/listener
+
 exit
 ```
 
@@ -63,6 +76,11 @@ export ROS_SECURITY_ROOT_DIRECTORY=`pwd`/install
 export ROS_SECURITY_ENABLE=true
 export ROS_SECURITY_STRATEGY=Enforce
 
+ros2 run demo_nodes_cpp talker __ns:=/
+ros2 run demo_nodes_cpp talker __ns:=/foo
 ros2 run demo_nodes_cpp talker __ns:=/foo/bar
+
+ros2 run demo_nodes_cpp listener __ns:=/
+ros2 run demo_nodes_cpp listener __ns:=/foo
 ros2 run demo_nodes_cpp listener __ns:=/foo/bar
 ```
