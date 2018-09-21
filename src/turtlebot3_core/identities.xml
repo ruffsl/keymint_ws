@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+    <identities>
+        <identity name="turtlebot3_core">
+            <cert>
+                <serial_number></serial_number>
+            </cert>
+        </identity>
+    </identities>
+</package>
