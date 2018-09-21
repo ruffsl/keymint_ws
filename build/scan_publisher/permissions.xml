@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dds>
+  <permissions>
+    <grant name="scan_publisher">
+      <subject_name>CN=scan_publisher</subject_name>
+      <validity>
+        <not_before>2013-10-26T00:00:00</not_before>
+        <not_after>2023-10-26T22:45:30</not_after>
+      </validity>
+      <allow_rule>
+        <domains>
+          <id>0</id>
+        </domains>
+        <subscribe>
+          <topics>
+            <topic>rt/clock</topic>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/scan_half</topic>
+            <topic>rr/scan_publisher/describe_parametersReply</topic>
+            <topic>rr/scan_publisher/get_parameter_typesReply</topic>
+            <topic>rr/scan_publisher/get_parametersReply</topic>
+            <topic>rr/scan_publisher/list_parametersReply</topic>
+            <topic>rr/scan_publisher/set_parametersReply</topic>
+            <topic>rr/scan_publisher/set_parameters_atomicallyReply</topic>
+            <topic>rq/scan_publisher/describe_parametersRequest</topic>
+            <topic>rq/scan_publisher/get_parameter_typesRequest</topic>
+            <topic>rq/scan_publisher/get_parametersRequest</topic>
+            <topic>rq/scan_publisher/list_parametersRequest</topic>
+            <topic>rq/scan_publisher/set_parametersRequest</topic>
+            <topic>rq/scan_publisher/set_parameters_atomicallyRequest</topic>
+          </topics>
+        </subscribe>
+        <publish>
+          <topics>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/scan</topic>
+            <topic>rq/scan_publisher/describe_parametersRequest</topic>
+            <topic>rq/scan_publisher/get_parameter_typesRequest</topic>
+            <topic>rq/scan_publisher/get_parametersRequest</topic>
+            <topic>rq/scan_publisher/list_parametersRequest</topic>
+            <topic>rq/scan_publisher/set_parametersRequest</topic>
+            <topic>rq/scan_publisher/set_parameters_atomicallyRequest</topic>
+            <topic>rr/scan_publisher/describe_parametersReply</topic>
+            <topic>rr/scan_publisher/get_parameter_typesReply</topic>
+            <topic>rr/scan_publisher/get_parametersReply</topic>
+            <topic>rr/scan_publisher/list_parametersReply</topic>
+            <topic>rr/scan_publisher/set_parametersReply</topic>
+            <topic>rr/scan_publisher/set_parameters_atomicallyReply</topic>
+          </topics>
+        </publish>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</dds>

@@ -1,0 +1,60 @@
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----C77279B16944D1523DCABC16850835BE"
+
+This is an S/MIME signed message
+
+------C77279B16944D1523DCABC16850835BE
+Content-Type: text/plain
+
+<?xml version="1.0" encoding="utf-8"?>
+<dds>
+  <permissions>
+    <grant name="turtlebot3_teleop_key">
+      <subject_name>CN=turtlebot3_teleop_key</subject_name>
+      <validity>
+        <not_before>2013-10-26T00:00:00</not_before>
+        <not_after>2023-10-26T22:45:30</not_after>
+      </validity>
+      <allow_rule>
+        <domains>
+          <id>0</id>
+        </domains>
+        <publish>
+          <topics>
+            <topic>rt/cmd_vel</topic>
+          </topics>
+        </publish>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</dds>
+
+------C77279B16944D1523DCABC16850835BE
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+MIIDngYJKoZIhvcNAQcCoIIDjzCCA4sCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggG0MIIBsDCCAVWgAwIBAgIBATAKBggqhkjOPQQDAjBVMQswCQYD
+VQQDDAJjYTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQ0wCwYDVQQKDARBY21l
+MR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAwMDBa
+Fw0yMzEwMjYyMjQ1MzBaMFUxCzAJBgNVBAMMAmNhMQswCQYDVQQGEwJVUzELMAkG
+A1UECAwCQ0ExDTALBgNVBAoMBEFjbWUxHTAbBgkqhkiG9w0BCQEMDmFjbWVAYWNt
+ZS5hY21lMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPqr+94Tys5aRyfhVyxB6
+96nm6rH3rQl3zwGm/6uBdFTEriWpbtAFLmTSARFsC3uc3FPETysXa/Sy9R6Q/Nix
+M6MWMBQwEgYDVR0TAQH/BAgwBgEB/wIBATAKBggqhkjOPQQDAgNJADBGAiEA6lhH
+fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
+sSxbN77b9WtkFToabk1rBzGCAa4wggGqAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
+BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
+DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTIxMDMwNjA5
+WjAvBgkqhkiG9w0BCQQxIgQgs1tVDWRO+RhlKsns2VNQFT8zps3OU0Ywg/40iWLT
+ViAweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERzBFAiBj
+ob7mnxnj66MMsLeU33B1VHoKa3qvg4BCRcIYy9I2yQIhAP5j98Tf34jP/P5yYHze
+z76qFOKlhTTH30KbhZSQ2ff6
+
+------C77279B16944D1523DCABC16850835BE--
+
