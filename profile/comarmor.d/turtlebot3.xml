@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <profiles xmlns:xi="http://www.w3.org/2001/XInclude">
-  <profile name="/_ros2cli_node_daemon_0">
+  <profile name="ROS2 CLI Node Daemon">
     <attachments>
       <attachment>/_ros2cli_node_daemon_0</attachment>
     </attachments>
   </profile>
-  <profile name="/joint_states_publisher">
+
+  <profile name="Turtlebot3 HLDS Laser Publisher">
+    <attachments>
+      <attachment>/hlds_laser_publisher</attachment>
+    </attachments>
+    <xi:include href="common/node.xml" parse="xml" />
+
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/scan</attachment>
+      </attachments>
+      <permissions>
+        <ros_publish/>
+      </permissions>
+    </ros_topic>
+  </profile>
+
+  <profile name="Turtlebot3 Joint States Publisher">
     <attachments>
       <attachment>/joint_states_publisher</attachment>
     </attachments>
@@ -28,7 +45,8 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/odometry_publisher">
+
+  <profile name="Turtlebot3 Odometry Publisher">
     <attachments>
       <attachment>/odometry_publisher</attachment>
     </attachments>
@@ -52,7 +70,8 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/robot_state_publisher">
+
+  <profile name="Turtlebot3 Robot State Publisher">
     <attachments>
       <attachment>/robot_state_publisher</attachment>
     </attachments>
@@ -77,35 +96,44 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/rviz">
+
+  <profile name="Turtlebot3 Rviz">
     <attachments>
       <attachment>/rviz</attachment>
     </attachments>
-    <xi:include href="common/node.xml" parse="xml" />
+    <xi:include href="common/rviz.xml" parse="xml" />
 
     <ros_topic qualifier="ALLOW">
       <attachments>
-        <attachment>/clicked_point</attachment>
-        <attachment>/move_base_simple/goal</attachment>
+        <attachment>/scan</attachment>
+        <attachment>/scan_half</attachment>
       </attachments>
       <permissions>
-        <ros_publish/>
         <ros_subscribe/>
       </permissions>
     </ros_topic>
     <ros_topic qualifier="ALLOW">
       <attachments>
-        <attachment>/odom</attachment>
-        <attachment>/scan_half</attachment>
-        <attachment>/tf</attachment>
-        <attachment>/tf_static</attachment>
+        <!-- FIXME: This rviz profile still seems to be missing somthing and
+        doesn't work withouth this. Find exactly what else rviz work -->
+        <attachment>*</attachment>
       </attachments>
       <permissions>
         <ros_subscribe/>
       </permissions>
     </ros_topic>
+    <!-- <topic qualifier="ALLOW">
+      <attachments>
+        <attachment>*</attachment>
+      </attachments>
+      <permissions>
+        <publish/>
+        <subscribe/>
+      </permissions>
+    </topic> -->
   </profile>
-  <profile name="/scan_publisher">
+
+  <profile name="Turtlebot3 Scan Re-Publisher">
     <attachments>
       <attachment>/scan_publisher</attachment>
     </attachments>
@@ -128,7 +156,8 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/tf_publisher">
+
+  <profile name="Turtlebot3 TF Publisher">
     <attachments>
       <attachment>/tf_publisher</attachment>
     </attachments>
@@ -151,7 +180,8 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/time_sync">
+
+  <profile name="Turtlebot3 Time Sync">
     <attachments>
       <attachment>/time_sync</attachment>
     </attachments>
@@ -166,23 +196,41 @@
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/turtlebot3_core">
+
+  <profile name="Turtlebot3 Openrc">
     <attachments>
-      <attachment>/turtlebot3_core</attachment>
+      <attachment>/turtlebot3_openrc</attachment>
     </attachments>
+
     <ros_topic qualifier="ALLOW">
       <attachments>
-        <attachment>/scan_half</attachment>
+        <attachment>/cmd_vel</attachment>
+        <attachment>/motor_power</attachment>
+        <attachment>/reset</attachment>
+        <attachment>/time_sync</attachment>
+      </attachments>
+      <permissions>
+        <ros_subscribe/>
+      </permissions>
+    </ros_topic>
+    <ros_topic qualifier="ALLOW">
+      <attachments>
+        <attachment>/imu</attachment>
+        <attachment>/joint_states</attachment>
+        <attachment>/sensor_state</attachment>
+        <attachment>/version_info</attachment>
       </attachments>
       <permissions>
         <ros_publish/>
       </permissions>
     </ros_topic>
   </profile>
-  <profile name="/turtlebot3_teleop_key">
+
+  <profile name="Turtlebot3 Teleop Keyboard">
     <attachments>
       <attachment>/turtlebot3_teleop_key</attachment>
     </attachments>
+
     <ros_topic qualifier="ALLOW">
       <attachments>
         <attachment>/cmd_vel</attachment>

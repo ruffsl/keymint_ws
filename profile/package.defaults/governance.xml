@@ -3,6 +3,9 @@
     <domains>
         <id>0</id>
     </domains>
+    <!-- TODO: Even when permiting for unencripted topics to acomidate them
+    Micro RTPS Agent, allowing the reader/writers to match, the XRCE readers
+    still do not seem to be able to read from such govered writers-->
     <allow_unauthenticated_participants>false</allow_unauthenticated_participants>
     <enable_join_access_control>true</enable_join_access_control>
     <discovery_protection_kind>ENCRYPT</discovery_protection_kind>

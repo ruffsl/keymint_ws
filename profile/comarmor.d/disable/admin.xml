@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles xmlns:xi="http://www.w3.org/2001/XInclude">
+  <profile name="admin">
+    <attachments>
+      <attachment>*</attachment>
+    </attachments>
+    <topic qualifier="ALLOW">
+      <attachments>
+        <attachment>*</attachment>
+      </attachments>
+      <permissions>
+        <publish/>
+        <subscribe/>
+      </permissions>
+    </topic>
+  </profile>
+</profiles>

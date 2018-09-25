@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<profile name="Parameters" xmlns:xi="http://www.w3.org/2001/XInclude">
+<profile name="Node/Parameters" xmlns:xi="http://www.w3.org/2001/XInclude">
     <attachments>
         <attachment>/*</attachment>
     </attachments>

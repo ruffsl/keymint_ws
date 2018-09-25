@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<profile name="Rviz" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <attachments>
+        <attachment>/*</attachment>
+    </attachments>
+    <xi:include href="node.xml" parse="xml" />
+    <xi:include href="rviz/tools.xml" parse="xml" />
+    <xi:include href="rviz/basic.xml" parse="xml" />
+</profile>
