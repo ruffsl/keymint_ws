@@ -1,0 +1,91 @@
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----12D2CD074E6F50755CEA958E273F85A1"
+
+This is an S/MIME signed message
+
+------12D2CD074E6F50755CEA958E273F85A1
+Content-Type: text/plain
+
+<?xml version="1.0" encoding="utf-8"?>
+<dds>
+  <permissions>
+    <grant name="hlds_laser_publisher">
+      <subject_name>CN=hlds_laser_publisher</subject_name>
+      <validity>
+        <not_before>2013-10-26T00:00:00</not_before>
+        <not_after>2023-10-26T22:45:30</not_after>
+      </validity>
+      <allow_rule>
+        <domains>
+          <id>0</id>
+        </domains>
+        <subscribe>
+          <topics>
+            <topic>rt/clock</topic>
+            <topic>rt/parameter_events</topic>
+            <topic>rr/hlds_laser_publisher/describe_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/get_parameter_typesReply</topic>
+            <topic>rr/hlds_laser_publisher/get_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/list_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/set_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/set_parameters_atomicallyReply</topic>
+            <topic>rq/hlds_laser_publisher/describe_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/get_parameter_typesRequest</topic>
+            <topic>rq/hlds_laser_publisher/get_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/list_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/set_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/set_parameters_atomicallyRequest</topic>
+          </topics>
+        </subscribe>
+        <publish>
+          <topics>
+            <topic>rt/parameter_events</topic>
+            <topic>rt/scan</topic>
+            <topic>rq/hlds_laser_publisher/describe_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/get_parameter_typesRequest</topic>
+            <topic>rq/hlds_laser_publisher/get_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/list_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/set_parametersRequest</topic>
+            <topic>rq/hlds_laser_publisher/set_parameters_atomicallyRequest</topic>
+            <topic>rr/hlds_laser_publisher/describe_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/get_parameter_typesReply</topic>
+            <topic>rr/hlds_laser_publisher/get_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/list_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/set_parametersReply</topic>
+            <topic>rr/hlds_laser_publisher/set_parameters_atomicallyReply</topic>
+          </topics>
+        </publish>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</dds>
+
+------12D2CD074E6F50755CEA958E273F85A1
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+MIIDngYJKoZIhvcNAQcCoIIDjzCCA4sCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggG0MIIBsDCCAVWgAwIBAgIBATAKBggqhkjOPQQDAjBVMQswCQYD
+VQQDDAJjYTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQ0wCwYDVQQKDARBY21l
+MR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAwMDBa
+Fw0yMzEwMjYyMjQ1MzBaMFUxCzAJBgNVBAMMAmNhMQswCQYDVQQGEwJVUzELMAkG
+A1UECAwCQ0ExDTALBgNVBAoMBEFjbWUxHTAbBgkqhkiG9w0BCQEMDmFjbWVAYWNt
+ZS5hY21lMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPqr+94Tys5aRyfhVyxB6
+96nm6rH3rQl3zwGm/6uBdFTEriWpbtAFLmTSARFsC3uc3FPETysXa/Sy9R6Q/Nix
+M6MWMBQwEgYDVR0TAQH/BAgwBgEB/wIBATAKBggqhkjOPQQDAgNJADBGAiEA6lhH
+fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
+sSxbN77b9WtkFToabk1rBzGCAa4wggGqAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
+BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
+DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI1MDUyMjUx
+WjAvBgkqhkiG9w0BCQQxIgQgeP5LSu2Kh2pWG+1PKbE5bPhVQjuWpMMSx23UeKhm
+1CIweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERzBFAiEA
+9iAH9k2yZ61tNiWAM4yzXq22B2S0LTkdJ5Hrq/zaEtYCIBfDMBVCRzF3EvymSFXR
+EvLkzcJJaj+S+zdrQk4QVKgt
+
+------12D2CD074E6F50755CEA958E273F85A1--
+

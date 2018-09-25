@@ -15,12 +15,15 @@
           <topics>
             <topic>rt/clock</topic>
             <topic>rt/parameter_events</topic>
+            <topic>rt/goal</topic>
             <topic>rt/clicked_point</topic>
             <topic>rt/move_base_simple/goal</topic>
             <topic>rt/odom</topic>
-            <topic>rt/scan_half</topic>
             <topic>rt/tf</topic>
             <topic>rt/tf_static</topic>
+            <topic>rt/scan</topic>
+            <topic>rt/scan_half</topic>
+            <topic>rt*</topic>
             <topic>rr/rviz/describe_parametersReply</topic>
             <topic>rr/rviz/get_parameter_typesReply</topic>
             <topic>rr/rviz/get_parametersReply</topic>
@@ -38,6 +41,7 @@
         <publish>
           <topics>
             <topic>rt/parameter_events</topic>
+            <topic>rt/goal</topic>
             <topic>rt/clicked_point</topic>
             <topic>rt/move_base_simple/goal</topic>
             <topic>rq/rviz/describe_parametersRequest</topic>

@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----362E7ED3E4238BDCE043750052C9AEAA"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----B4A72F9CE53E855EF92E84C33B9A5FAF"
 
 This is an S/MIME signed message
 
-------362E7ED3E4238BDCE043750052C9AEAA
+------B4A72F9CE53E855EF92E84C33B9A5FAF
 Content-Type: text/plain
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -23,12 +23,15 @@ Content-Type: text/plain
           <topics>
             <topic>rt/clock</topic>
             <topic>rt/parameter_events</topic>
+            <topic>rt/goal</topic>
             <topic>rt/clicked_point</topic>
             <topic>rt/move_base_simple/goal</topic>
             <topic>rt/odom</topic>
-            <topic>rt/scan_half</topic>
             <topic>rt/tf</topic>
             <topic>rt/tf_static</topic>
+            <topic>rt/scan</topic>
+            <topic>rt/scan_half</topic>
+            <topic>rt*</topic>
             <topic>rr/rviz/describe_parametersReply</topic>
             <topic>rr/rviz/get_parameter_typesReply</topic>
             <topic>rr/rviz/get_parametersReply</topic>
@@ -46,6 +49,7 @@ Content-Type: text/plain
         <publish>
           <topics>
             <topic>rt/parameter_events</topic>
+            <topic>rt/goal</topic>
             <topic>rt/clicked_point</topic>
             <topic>rt/move_base_simple/goal</topic>
             <topic>rq/rviz/describe_parametersRequest</topic>
@@ -68,12 +72,12 @@ Content-Type: text/plain
   </permissions>
 </dds>
 
-------362E7ED3E4238BDCE043750052C9AEAA
+------B4A72F9CE53E855EF92E84C33B9A5FAF
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
 
-MIIDnwYJKoZIhvcNAQcCoIIDkDCCA4wCAQExDzANBglghkgBZQMEAgEFADALBgkq
+MIIDnQYJKoZIhvcNAQcCoIIDjjCCA4oCAQExDzANBglghkgBZQMEAgEFADALBgkq
 hkiG9w0BBwGgggG0MIIBsDCCAVWgAwIBAgIBATAKBggqhkjOPQQDAjBVMQswCQYD
 VQQDDAJjYTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQ0wCwYDVQQKDARBY21l
 MR0wGwYJKoZIhvcNAQkBDA5hY21lQGFjbWUuYWNtZTAeFw0xMzEwMjYwMDAwMDBa
@@ -83,16 +87,16 @@ ZS5hY21lMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEPqr+94Tys5aRyfhVyxB6
 96nm6rH3rQl3zwGm/6uBdFTEriWpbtAFLmTSARFsC3uc3FPETysXa/Sy9R6Q/Nix
 M6MWMBQwEgYDVR0TAQH/BAgwBgEB/wIBATAKBggqhkjOPQQDAgNJADBGAiEA6lhH
 fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
-sSxbN77b9WtkFToabk1rBzGCAa8wggGrAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
+sSxbN77b9WtkFToabk1rBzGCAa0wggGpAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
 BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
 DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
-hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTIxMDMwNjA0
-WjAvBgkqhkiG9w0BCQQxIgQgZG/GzxRHwNjo7QKc6ohiuh3gHv6/sIJAeHhHvziQ
-eo0weQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI1MDYyNzEx
+WjAvBgkqhkiG9w0BCQQxIgQgm9YRbF1Wi0HNAfaYNgbNb3ud7uCY77XGiIjyY8gb
+/fIweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
 CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
-AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIESDBGAiEA
-l/O1IifMsPJjuTbsZEByYRmMcyilDaU5tDEwg/YHRK4CIQCkkMsohLgp/K42S3/2
-OG9N5QAEQqgcpxV3G4ZYVCRJ9Q==
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERjBEAiB2
+1XpAuPbij8RcDFw1fflOb74CGBBgBSzLrhDjDvwGxwIgM+hg9eSPtCyxfQP/Fx/f
+bClexOpR0/ugP3eCSycVwn0=
 
-------362E7ED3E4238BDCE043750052C9AEAA--
+------B4A72F9CE53E855EF92E84C33B9A5FAF--
 
