@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
     <identities>
-        <identity name="turtlebot3_core">
+        <identity name="turtlebot3_openrc">
             <cert>
                 <serial_number></serial_number>
             </cert>

@@ -7,17 +7,21 @@
           <ros_topics>
             <ros_topic>/clock</ros_topic>
             <ros_topic>/parameter_events</ros_topic>
+            <ros_topic>/goal</ros_topic>
             <ros_topic>/clicked_point</ros_topic>
             <ros_topic>/move_base_simple/goal</ros_topic>
             <ros_topic>/odom</ros_topic>
-            <ros_topic>/scan_half</ros_topic>
             <ros_topic>/tf</ros_topic>
             <ros_topic>/tf_static</ros_topic>
+            <ros_topic>/scan</ros_topic>
+            <ros_topic>/scan_half</ros_topic>
+            <ros_topic>*</ros_topic>
           </ros_topics>
         </ros_subscribe>
         <ros_publish>
           <ros_topics>
             <ros_topic>/parameter_events</ros_topic>
+            <ros_topic>/goal</ros_topic>
             <ros_topic>/clicked_point</ros_topic>
             <ros_topic>/move_base_simple/goal</ros_topic>
           </ros_topics>

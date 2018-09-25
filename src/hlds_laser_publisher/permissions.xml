@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <permissions>
+    <grant name="hlds_laser_publisher">
+      <allow_rule>
+        <ros_subscribe>
+          <ros_topics>
+            <ros_topic>/clock</ros_topic>
+            <ros_topic>/parameter_events</ros_topic>
+          </ros_topics>
+        </ros_subscribe>
+        <ros_publish>
+          <ros_topics>
+            <ros_topic>/parameter_events</ros_topic>
+            <ros_topic>/scan</ros_topic>
+          </ros_topics>
+        </ros_publish>
+        <ros_call>
+          <ros_services>
+            <ros_service>/hlds_laser_publisher/describe_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/get_parameter_types</ros_service>
+            <ros_service>/hlds_laser_publisher/get_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/list_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/set_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/set_parameters_atomically</ros_service>
+          </ros_services>
+        </ros_call>
+        <ros_execute>
+          <ros_services>
+            <ros_service>/hlds_laser_publisher/describe_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/get_parameter_types</ros_service>
+            <ros_service>/hlds_laser_publisher/get_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/list_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/set_parameters</ros_service>
+            <ros_service>/hlds_laser_publisher/set_parameters_atomically</ros_service>
+          </ros_services>
+        </ros_execute>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</package>
