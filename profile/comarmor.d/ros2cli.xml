@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <profiles xmlns:xi="http://www.w3.org/2001/XInclude">
-    <profile name="My Launch Profile">
+    <profile name="ROS2 CLI Node Daemon">
+      <attachments>
+        <attachment>/_ros2cli_node_daemon_0</attachment>
+      </attachments>
+    </profile>
+
+    <profile name="ROS2 Launch">
         <attachments>
             <attachment>/launch_ros</attachment>
         </attachments>

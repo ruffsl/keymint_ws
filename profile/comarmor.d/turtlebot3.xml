@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <profiles xmlns:xi="http://www.w3.org/2001/XInclude">
-  <profile name="ROS2 CLI Node Daemon">
-    <attachments>
-      <attachment>/_ros2cli_node_daemon_0</attachment>
-    </attachments>
-  </profile>
-
   <profile name="Turtlebot3 HLDS Laser Publisher">
     <attachments>
       <attachment>/hlds_laser_publisher</attachment>
