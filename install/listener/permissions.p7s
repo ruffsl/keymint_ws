@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----653F312691EC90F152CCA20228E05D8D"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----39F3D5117620ADDA1B4D08FAEC02E738"
 
 This is an S/MIME signed message
 
-------653F312691EC90F152CCA20228E05D8D
+------39F3D5117620ADDA1B4D08FAEC02E738
 Content-Type: text/plain
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -17,7 +17,10 @@ Content-Type: text/plain
       </validity>
       <allow_rule>
         <domains>
-          <id>0</id>
+          <id_range>
+            <min>0</min>
+            <max>42</max>
+          </id_range>
         </domains>
         <subscribe>
           <topics>
@@ -61,7 +64,7 @@ Content-Type: text/plain
   </permissions>
 </dds>
 
-------653F312691EC90F152CCA20228E05D8D
+------39F3D5117620ADDA1B4D08FAEC02E738
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
@@ -79,13 +82,13 @@ fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
 sSxbN77b9WtkFToabk1rBzGCAa8wggGrAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
 BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
 DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
-hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI1MjI1MjU5
-WjAvBgkqhkiG9w0BCQQxIgQgYOHSVviHgYCjamIc2XVueRl2OoxWnSsa95bpbgkY
-4VkweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI2MDEwNDAz
+WjAvBgkqhkiG9w0BCQQxIgQgBMrm5xlvWoXpSlp2zl9PF0p21dWKhZ1e02F1Mojc
+7KUweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
 CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
 AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIESDBGAiEA
-5126qlcdw/cvkuka9TRhoraEqGmnKlAAqWitp7IZK5YCIQDex5R61GCbPSxT1Fp7
-1ePCvNKqAQ5dg8o0xfzXUR8LuA==
+tivtk/BKPYyTXQp9agDntigfQwCaBCjDHQbHqL2j83YCIQDwMa7Ghe1rad04esc7
+PIftJi8ncuDC/ZCJI46jzxt4ug==
 
-------653F312691EC90F152CCA20228E05D8D--
+------39F3D5117620ADDA1B4D08FAEC02E738--
 

@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----435D245AE77B442EA05BCDF296C9F72F"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----497149CA29AF12199DB859208C73E838"
 
 This is an S/MIME signed message
 
-------435D245AE77B442EA05BCDF296C9F72F
+------497149CA29AF12199DB859208C73E838
 Content-Type: text/plain
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -17,7 +17,10 @@ Content-Type: text/plain
       </validity>
       <allow_rule>
         <domains>
-          <id>0</id>
+          <id_range>
+            <min>0</min>
+            <max>42</max>
+          </id_range>
         </domains>
         <subscribe>
           <topics>
@@ -64,7 +67,7 @@ Content-Type: text/plain
   </permissions>
 </dds>
 
-------435D245AE77B442EA05BCDF296C9F72F
+------497149CA29AF12199DB859208C73E838
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
@@ -82,13 +85,13 @@ fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
 sSxbN77b9WtkFToabk1rBzGCAa4wggGqAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
 BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
 DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
-hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI1MjI1MzAx
-WjAvBgkqhkiG9w0BCQQxIgQgSa23Mn4tIEgpZcYI4zb4+abVTb1gsJr34hZ4TKJG
-u84weQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI2MDEwNDA1
+WjAvBgkqhkiG9w0BCQQxIgQgwLipkKrmG/5ZBprW7M04BNJsUU9kFkv6fB278iyh
+EkEweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
 CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
-AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERzBFAiAI
-/odjSxcvvJNsQLByJjhjeAl7Swx5hqMU1NDo6YgTngIhAOkXiAToFYWj0Oefmsz0
-ia1DEgGByU6X0vXYbesiB4mc
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERzBFAiEA
+32QOhLSezDghoBdgrJJhnoehlWKrCJU0OlWqCRrqZioCIH2Sh2CVtGQ4m3RkD0xO
+z7EPz6rv+UKF4pfOUS0UiWWB
 
-------435D245AE77B442EA05BCDF296C9F72F--
+------497149CA29AF12199DB859208C73E838--
 

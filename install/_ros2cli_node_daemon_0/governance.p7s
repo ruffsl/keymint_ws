@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----CD2DC043ACFFA2BEEC2B80B79C4CFDAC"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----8967751F4D9855E9E06DA00D2BA0FA5D"
 
 This is an S/MIME signed message
 
-------CD2DC043ACFFA2BEEC2B80B79C4CFDAC
+------8967751F4D9855E9E06DA00D2BA0FA5D
 Content-Type: text/plain
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -11,7 +11,10 @@ Content-Type: text/plain
   <domain_access_rules>
     <domain_rule>
       <domains>
-        <id>0</id>
+        <id_range>
+          <min>0</min>
+          <max>42</max>
+        </id_range>
       </domains>
       <allow_unauthenticated_participants>false</allow_unauthenticated_participants>
       <enable_join_access_control>true</enable_join_access_control>
@@ -33,7 +36,7 @@ Content-Type: text/plain
   </domain_access_rules>
 </dds>
 
-------CD2DC043ACFFA2BEEC2B80B79C4CFDAC
+------8967751F4D9855E9E06DA00D2BA0FA5D
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
@@ -51,13 +54,13 @@ fgwmpTS+u3i5qAVTBS6WTBDLP81z920CLZrJLpcCIQCAtHve8pYj/VMqVZHMcq7/
 sSxbN77b9WtkFToabk1rBzGCAa0wggGpAgEBMFowVTELMAkGA1UEAwwCY2ExCzAJ
 BgNVBAYTAlVTMQswCQYDVQQIDAJDQTENMAsGA1UECgwEQWNtZTEdMBsGCSqGSIb3
 DQEJAQwOYWNtZUBhY21lLmFjbWUCAQEwDQYJYIZIAWUDBAIBBQCggeQwGAYJKoZI
-hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI1MjI1MzAy
-WjAvBgkqhkiG9w0BCQQxIgQgLVL1zQVlZ9WUw0d1PrRSPIIryhRqT5+LdMjHla1G
-y+0weQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
+hvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwOTI2MDEwNDA1
+WjAvBgkqhkiG9w0BCQQxIgQgs2tB4P7jCz/r1dN1bJv4OGkJUsOcttF08QDDM2oW
+GNwweQYJKoZIhvcNAQkPMWwwajALBglghkgBZQMEASowCwYJYIZIAWUDBAEWMAsG
 CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcN
-AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERjBEAiA8
-Y4PTuqiFRN8Zwq3rAsJ7kzlDV9NFG1xO2v8x/CQXvAIgebIAXRwXPltgc5PQgB4R
-135EUQ8l8utyaFHHUFZNp3c=
+AwICAUAwBwYFKw4DAgcwDQYIKoZIhvcNAwICASgwCgYIKoZIzj0EAwIERjBEAiAi
+Q+7RTLw3hGl1EiAvJ+An3IRhQFTzjMn3cP5icdcGSAIgCHeENRaQbXvu0Iy0Cpp8
+SBZClzEPezZZnkec7KXCVt0=
 
-------CD2DC043ACFFA2BEEC2B80B79C4CFDAC--
+------8967751F4D9855E9E06DA00D2BA0FA5D--
 
