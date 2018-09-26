@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <defaults>
     <domains>
-      <id>0</id>
+      <id_range>
+        <min>0</min>
+        <max>42</max>
+      </id_range>
     </domains>
     <subject_name>CN={name}</subject_name>
     <validity>
