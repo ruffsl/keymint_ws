@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <permissions>
+    <grant name="foo/bar/talker">
+      <allow_rule>
+        <subscribe>
+          <ros_topics>
+            <ros_topic>/clock</ros_topic>
+            <ros_topic>/foo/bar/parameter_events</ros_topic>
+          </ros_topics>
+        </subscribe>
+        <publish>
+          <ros_topics>
+            <ros_topic>/foo/bar/parameter_events</ros_topic>
+            <ros_topic>/foo/bar/chatter</ros_topic>
+          </ros_topics>
+        </publish>
+        <request>
+          <ros_services>
+            <ros_service>/foo/bar/talker/describe_parameters</ros_service>
+            <ros_service>/foo/bar/talker/get_parameter_types</ros_service>
+            <ros_service>/foo/bar/talker/get_parameters</ros_service>
+            <ros_service>/foo/bar/talker/list_parameters</ros_service>
+            <ros_service>/foo/bar/talker/set_parameters</ros_service>
+            <ros_service>/foo/bar/talker/set_parameters_atomically</ros_service>
+          </ros_services>
+        </request>
+      </allow_rule>
+      <default>DENY</default>
+    </grant>
+  </permissions>
+</package>
