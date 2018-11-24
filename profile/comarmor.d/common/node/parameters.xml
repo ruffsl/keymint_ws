@@ -10,8 +10,8 @@
             <attachment>{namespace}parameter_events</attachment>
         </attachments>
         <permissions>
-            <ros_publish/>
-            <ros_subscribe/>
+            <publish/>
+            <subscribe/>
         </permissions>
     </ros_topic>
 
@@ -25,8 +25,7 @@
             <attachment>{namespace}{name}/set_parameters_atomically</attachment>
         </attachments>
         <permissions>
-            <ros_call/>
-            <ros_execute/>
+            <request/>
         </permissions>
     </ros_service>
 </profile>

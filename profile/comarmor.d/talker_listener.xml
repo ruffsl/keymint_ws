@@ -12,7 +12,7 @@
                 <attachment>{namespace}chatter</attachment>
             </attachments>
             <permissions>
-                <ros_publish/>
+                <publish/>
             </permissions>
         </ros_topic>
     </profile>
@@ -28,7 +28,7 @@
                 <attachment>{namespace}chatter</attachment>
             </attachments>
             <permissions>
-                <ros_subscribe/>
+                <subscribe/>
             </permissions>
         </ros_topic>
     </profile>

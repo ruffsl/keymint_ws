@@ -4,7 +4,7 @@
     <attachments>
       <attachment>*</attachment>
     </attachments>
-    <topic qualifier="ALLOW">
+    <dds_topic qualifier="ALLOW">
       <attachments>
         <attachment>*</attachment>
       </attachments>
@@ -12,6 +12,6 @@
         <publish/>
         <subscribe/>
       </permissions>
-    </topic>
+    </dds_topic>
   </profile>
 </profiles>

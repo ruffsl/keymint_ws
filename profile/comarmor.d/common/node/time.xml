@@ -10,7 +10,7 @@
             <attachment>/clock</attachment>
         </attachments>
         <permissions>
-            <ros_subscribe/>
+            <subscribe/>
         </permissions>
     </ros_topic>
 </profile>
